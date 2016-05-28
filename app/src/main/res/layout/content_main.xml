@@ -40,7 +40,7 @@
             android:layout_height="wrap_content"
             android:background="@color/lightprimary"
             android:textColor="@color/darkbtext"
-            android:text="@string/menuitem1">
-        </Button>
+            android:onClick="startscanner"
+            android:text="@string/menuitem1"/>
     </LinearLayout>
 </LinearLayout>
