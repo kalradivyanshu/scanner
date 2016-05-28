@@ -18,7 +18,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".barcode"></activity>
+        <activity android:name=".barcode" android:configChanges="orientation"></activity>
     </application>
-
+    <uses-feature android:name="android.hardware.camera" android:required="true" />
 </manifest>
