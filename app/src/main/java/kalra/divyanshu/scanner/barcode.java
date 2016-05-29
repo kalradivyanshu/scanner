@@ -107,10 +107,20 @@ public class barcode extends AppCompatActivity {
             try {
                 Barcode thisCode = barcodes.valueAt(0);
                 TextView txtView = (TextView) findViewById(R.id.txtContent);
-                txtView.setText(thisCode.rawValue);
+                //txtView.setText(thisCode.rawValue);
+                data = new Intent();
+                data.putExtra("qrcode", thisCode.rawValue);
+                // Activity finished ok, return the data
+                setResult(RESULT_OK, data);
+                finish();
             }
             catch (Exception e) {
-                Toast.makeText(barcode.this, "Could not find QR code!", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(barcode.this, "Could not find QR code!", Toast.LENGTH_SHORT).show();
+                data = new Intent();
+                data.putExtra("qrcode", "No QR code found.");
+                // Activity finished ok, return the data
+                setResult(RESULT_OK, data);
+                finish();
             }
         }
     }
